@@ -52,9 +52,9 @@ function Navigation() {
                 const Icon = item.icon;
                 return (
                   <Link key={item.path} href={item.path}>
-                    <a
+                    <span
                       className={cn(
-                        "flex items-center gap-2 px-4 h-9 rounded-lg text-sm font-medium transition-colors hover-elevate",
+                        "flex items-center gap-2 px-4 h-9 rounded-lg text-sm font-medium transition-colors hover-elevate cursor-pointer",
                         isActive
                           ? "bg-primary text-primary-foreground"
                           : "text-muted-foreground"
@@ -63,7 +63,7 @@ function Navigation() {
                     >
                       <Icon className="h-4 w-4" />
                       {item.label}
-                    </a>
+                    </span>
                   </Link>
                 );
               })}
